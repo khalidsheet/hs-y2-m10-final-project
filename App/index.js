@@ -22,6 +22,14 @@ export class App {
 
     this._stats = new Stats();
     document.body.appendChild(this._stats.dom);
+
+    this._animate();
+
+    this._initEvents();
+  }
+
+  _initEvents() {
+    window.addEventListener("resize", this._resize.bind(this));
   }
 
   _resize() {
